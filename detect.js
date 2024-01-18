@@ -42,8 +42,9 @@ kLog.on('keyData',async()=>{
     
     count=count+1
     if(s==1){
-        await inactive_model.findOneAndUpdate({date:currdate()},{$set:{inactive_end:crtime()}})
+        await inactive_model.findOneAndUpdate({date:currdate(),inactive_end:''},{$set:{inactive_end:crtime()}})
         s=0;
+        x=0;
          }
        
     });
@@ -51,8 +52,9 @@ kLog.on('mouseData',async()=>{
     
         count=count+1
         if(s==1){
-            await inactive_model.findOneAndUpdate({date:currdate()},{$set:{inactive_end:crtime()}})
+            await inactive_model.findOneAndUpdate({date:currdate(),inactive_end:''},{$set:{inactive_end:crtime()}})
             s=0;
+            x=0;
              }
            
         });    

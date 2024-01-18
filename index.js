@@ -5,7 +5,7 @@ import { attendence } from './attendance.js'
 import Stopwatch from 'statman-stopwatch'
 import { work,stop } from './detect.js'
 import { employeemodel } from './models/employeetrack.js'
-import { con } from './connect.js'
+import { con } from './db/connect.js'
 
 const app=express()
 const sw=new Stopwatch();
