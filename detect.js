@@ -33,7 +33,7 @@ const work=()=>{
     }
     count=0;
     work()
-        }, 5000);
+        }, 15000);
         if(c==1){
             clearTimeout(t)
         }

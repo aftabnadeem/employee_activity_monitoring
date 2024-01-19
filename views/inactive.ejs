@@ -1,0 +1,42 @@
+<%- include('header') %>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+        .tb{
+            background-color: #FFFF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;;
+            
+        }
+    </style>
+</head>
+<body style="background-color: #EFEFF1;justify-content: center;">
+    <div class="container">
+    <div class="tb">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">InActive Start</th>
+                <th scope="col">InActive_End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let y=1 %>
+              <% dt.forEach(x =>{ %>
+              <tr>
+                <th scope="row"><%= y %></th>
+                <td><%= x.date %></td>
+                <td><%= x.inactive_start %></td>
+                <td><%= x.inactive_end %></td>
+              </tr>
+              <% y=y+1; }) %>
+            </tbody>
+          </table>
+    </div>
+    </div>
+</body>
