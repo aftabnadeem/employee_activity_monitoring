@@ -7,13 +7,15 @@ import { work,stop } from './detect.js'
 import { employeemodel } from './models/employeetrack.js'
 import inactive_model from './models/inactive.js'
 import { con } from './db/connect.js'
+import  {join} from 'path'
 
 const app=express()
 const sw=new Stopwatch();
 app.set('view engine','ejs')
+app.use(express.static(join(process.cwd(),'/public')))
 con()
 app.get('/',(req,res)=>{
-    
+    res.render('home')
 })
 app.get('/checkin', async (req, resp) => {
     sw.start()
